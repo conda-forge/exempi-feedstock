@@ -1,6 +1,6 @@
 {% set name = "exempi" %}
-{% set version = "2.4.2" %}
-{% set sha256 = "5b0db25fa5ab11344adbc26e1d4a3ace2ad1166a7bea4f4d3fd1837e982bc6ec" %}
+{% set version = "2.4.3" %}
+{% set sha256 = "bfd1d8ebffe07918a5bfc7a5130ff82486d35575827cae8d131b9fa1c0c29c6e" %}
 
 package:
   name: {{ name|lower }}
@@ -18,7 +18,7 @@ requirements:
   build:
     - boost >=1.64
     - expat 
-    - zlib 1.2.8
+    - zlib >=1.2.11
   run:
     - expat
 
