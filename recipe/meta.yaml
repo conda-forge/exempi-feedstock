@@ -1,6 +1,6 @@
 {% set name = "exempi" %}
-{% set version = "2.4.3" %}
-{% set sha256 = "bfd1d8ebffe07918a5bfc7a5130ff82486d35575827cae8d131b9fa1c0c29c6e" %}
+{% set version = "2.4.5" %}
+{% set sha256 = "406185feb88e84ea1d4b4251370be2991205790d7113a7e28e192ff46a4f221e" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   skip: true  # [win]
 
 requirements:
