@@ -16,9 +16,14 @@ build:
 
 requirements:
   build:
-    - boost >=1.64
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - make
+    - cmake
+  host:
+    - boost
     - expat 
-    - zlib >=1.2.11
+    - zlib
   run:
     - expat
 
