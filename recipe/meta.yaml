@@ -11,14 +11,19 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   skip: true  # [win]
 
 requirements:
   build:
-    - boost >=1.64
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - make
+    - cmake
+  host:
+    - boost
     - expat 
-    - zlib >=1.2.11
+    - zlib
   run:
     - expat
 
