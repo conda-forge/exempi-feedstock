@@ -1,6 +1,6 @@
 {% set name = "exempi" %}
-{% set version = "2.5.0" %}
-{% set sha256 = "dc82fc24c0540a44a63fa4ad21775d24e00e63f1dedd3e2ae6f7aa27583b711b" %}
+{% set version = "2.5.2" %}
+{% set sha256 = "52f54314aefd45945d47a6ecf4bd21f362e6467fa5d0538b0d45a06bc6eaaed5" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 2
+  number: 0
   skip: true  # [win]
 
 requirements:
@@ -22,7 +22,7 @@ requirements:
     - cmake
   host:
     - boost
-    - expat 
+    - expat
     - zlib
   run:
     - expat
@@ -39,8 +39,8 @@ about:
   home: http://libopenraw.freedesktop.org/wiki/Exempi
   license: BSD 3-Clause
   license_family: BSD
-  license_file: '{{ environ["RECIPE_DIR"] }}/LICENSE.txt'
-  summary: 'exempi is a port of Adobe XMP SDK to work on UNIX'
+  license_file: {{ environ["RECIPE_DIR"] }}/LICENSE.txt
+  summary: exempi is a port of Adobe XMP SDK to work on UNIX
   dev_url: https://github.com/hfiguiere/exempi
 
 extra:
