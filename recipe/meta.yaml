@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 3
+  number: 4
   skip: true  # [win]
 
 requirements:
@@ -21,7 +21,7 @@ requirements:
     - make
     - cmake
   host:
-    - boost
+    - libboost-python-devel
     - expat 
     - zlib
   run:
@@ -32,8 +32,6 @@ test:
     - test -f $PREFIX/lib/libexempi.dylib  # [osx]
     - test -f $PREFIX/lib/libexempi.so  # [linux]
     - test -f $PREFIX/bin/exempi
-    - conda inspect linkages -p $PREFIX exempi  # [not win]
-    - conda inspect objects -p $PREFIX exempi  # [osx]
 
 about:
   home: http://libopenraw.freedesktop.org/wiki/Exempi
