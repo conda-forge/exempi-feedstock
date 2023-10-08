@@ -13,6 +13,9 @@ source:
 build:
   number: 4
   skip: true  # [win]
+  ignore_run_exports_from:
+    # build wants to find boost's unit_test_framework, but doesn't need to link to boost libs
+    - libboost-devel
 
 requirements:
   build:
@@ -21,7 +24,7 @@ requirements:
     - make
     - cmake
   host:
-    - libboost-headers
+    - libboost-devel
     - expat 
     - zlib
   run:
